@@ -1,0 +1,157 @@
+@import "normalize";
+@import "layout";
+@import "elements";
+@import "slick.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+body{
+	font: 700 86px/1.04 'Poppins', sans-serif;
+	letter-spacing: 2.5px;
+}
+
+a{
+	text-decoration: none;
+}
+
+h4{
+	font: 600 18px/1.04 'Poppins', sans-serif;
+	letter-spacing: 4px;
+	margin: 0;
+}
+
+h5{
+	font: 400 28px/1 'Poppins', sans-serif;
+	color: #fff;
+}
+
+p{
+	margin: 0;
+}
+
+/* Layout */
+.ba-container{
+	padding-left: 20px;
+	padding-right: 20px;
+	max-width: 1200px;
+	position: relative;
+}
+
+.ba-section{
+margin-bottom: 95px;
+}
+
+.ba-section-header{
+	text-transform: uppercase;
+	text-align: center;
+	padding-top: 60px;
+	position: relative;
+}
+
+.ba-section-header h4 {
+	margin-bottom: 15px;
+}
+
+.ba-section-header{
+	&:before {
+		content: '';
+		position: absolute;
+		top: 8.5%;
+		right: 15.5%;
+		width: 30px;
+		height: 30px;
+		background: url(../img/plus.svg) no-repeat;
+		background-size: contain;
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: 22%;
+		left: -3%;
+		width: 50px;
+		height: 50px;
+		background: url(../img/triangle.svg) no-repeat;
+		background-size: contain;
+	}
+}
+.ba-slide{
+	
+	&__body{
+		position: relative;
+		z-index: 5;
+	}
+	&__description{
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: rgba(27, 241, 173, 0.8);
+		color: #ffffff;
+		transform: translateY(100%);
+		transition: transform 0.4s;
+		z-index: 5;
+		padding-top: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		padding: 0 110px 35px 30px;
+	}
+	&:hover {
+		.ba-slide__description{
+			transform: translateY(0);
+		}
+	}
+	&__title{
+		font: 700 28px/1 'Poppins', sans-serif;
+		text-transform: uppercase;
+		letter-spacing: 0.2em;
+		
+	}
+	&__more{
+		font: 700 12px/0.5 'Poppins', sans-serif;
+		text-transform: uppercase;
+	}
+}
+
+.slick-active:hover {
+		.ba-slide__description{
+			transform: translateY(0);
+		}
+	}
+
+.ba-section-sliders{
+	position: relative;
+}
+.ba-sliders{
+	&__arrow{
+		border: none;
+		background-size: contain;
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+		outline: none;
+		transform: translateY(-50%);
+		z-index: 3;
+		position: absolute;
+		top: 50%;
+		&:hover{
+			opacity: 0.4;
+			}
+	}
+	&__prev {
+		background: url(../img/leftArrow.png) no-repeat center;
+		
+		left: 0.5%;
+	}
+	&__next {
+		background: url(../img/rightArrow.png) no-repeat center;
+		right: 0.5%;
+	}
+}
+
+ .ba-sliders-wraper{
+	 padding-right: 19%;
+	 overflow: hidden;
+    margin-left: 5%;
+ }
